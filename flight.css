@@ -1,5 +1,6 @@
 html{
   min-height: 100%;
+  min-width: 100%;
   position: relative;
 }
 body{
@@ -18,9 +19,8 @@ body{
     margin:0 auto;
     padding:0;
     opacity:0.8;
-    z-index: -1;
 }
-#wrap2{
+/*#wrap2{
     position:absolute;
     background-color:#171716;
     margin:0 auto;
@@ -33,9 +33,10 @@ body{
     left:0;
     z-index: -1;
     height: 100%;
-}
+}*/
 .fixedwidth{
     width:1400px;
+    height: inherit;
     margin:0 auto;
 }
 .fixedwidthHeader{
@@ -95,7 +96,7 @@ ul.horizontal li{
 }
 .mainpagecontent{
     width:100%;
-    height: 100%;
+    height: inherit;
     padding:0;
     margin:0 auto;
     margin-top: 80px;
@@ -131,9 +132,6 @@ h3{
     padding: 10px;
     font-size: 15px;
 }
-.mainpagecontent div:nth-child(2){
-  
-}
 .itemBox a{
   color: #F0F0EB;
   text-decoration: none;
@@ -158,13 +156,13 @@ h3{
   height: 450px;
   padding: 40px 20px 0px 20px;
 }
-#previews div:nth-child(3){
+#previews a:nth-child(3){
   margin-right: 0;
 }
 .previewBox{
   margin-right: 100px;
   width: 250px;
-  height: 400px;
+  height: 500px;
   border: 2px solid black;
   float: left;
   position: relative;
@@ -182,14 +180,18 @@ h3{
   margin-right:auto;
   font-size: 24px;
 }
+.previewBox a{
+  margin: 0 auto;
+  padding: 0;
+}
 #selfBow{
-  background-image:url("images/selfBowSideView.jpg");
+  background-image:url();
 }
 #englishLongbow{
-  background-image:url("images/selfBowSideView.jpg");
+  background-image:url();
 }
 #flatBow{
-  background-image:url("images/selfBowSideView.jpg");
+  background-image:url();
 }
 
 #footer{
