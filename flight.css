@@ -166,50 +166,26 @@ h3{
 }
 .itemBox iframe{
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-top: 40px;
   padding-left: 17em;
 }
-#whatYouNeed{
-  width:inherit;
-  width: 35%;
+.itemBox iframe:last-child{
+  margin-bottom: 40px;
+}
+#info{
+  margin: 50px 0px 0px 150px;
+  width:35%;
+  float: left;
+  clear: none;
+}
+#info:nth-child(2){
+  margin-left: 70px;
+  margin-bottom: 50px;
+  clear:right;
 }
 #aboutus{
   text-indent: 2em;
   font-size: 16px;
-}
-#previews{
-  margin: 0 auto;
-  width: 1000px;
-  height: 450px;
-  padding: 40px 20px 0px 20px;
-}
-#previews a:nth-child(3){
-  margin-right: 0;
-}
-.previewBox{
-  margin-right: 100px;
-  width: 250px;
-  height: 500px;
-  border: 2px solid black;
-  float: left;
-  position: relative;
-  text-align: center;
-  overflow: hidden;
-  opacity: 100%;
-  background-color:#C7D5E4;
-}
-.previewBox p{
-  position:absolute;
-  left:0;
-  right:0;
-  bottom: 0;
-  margin-left:auto;
-  margin-right:auto;
-  font-size: 24px;
-}
-.previewBox a{
-  margin: 0 auto;
-  padding: 0;
 }
 #selfBow{
   background-image:url();
