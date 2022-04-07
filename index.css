@@ -1,0 +1,171 @@
+body{
+  margin: 0 auto;
+  padding: 0;
+  color:#ddd;
+}
+
+.pageBackground{
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+.background{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+header{
+  height: 60px;
+  width: 100%;
+  background:rgba(50,50,50,.7);
+  margin: 0;
+  padding: 0;
+}
+
+h1, h3{
+  color: #ddd;
+  text-shadow: -1px 1px 0 #000,
+              1px 1px 0 #000,
+              1px -1px 0 #000,
+              -1px -1px 0 #000;
+}
+
+h1, h3{
+  margin: 0 auto;
+  padding-left: 50px;
+}
+
+h3{
+  padding-left: 70px;
+}
+
+#container{
+  background:rgba(50,50,50,.6);
+  margin: 50px 50px 0 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  margin: 50px 50px 0 50px;
+  flex-wrap: nowrap;
+}
+
+.imageRow{
+  height:300px;
+}
+
+.contentRow{
+  min-height: 150px;
+}
+
+.itemSection{
+  width:30%;
+  margin: 0 50px 50px 50px;
+  transform: translateY(900px);
+  filter:blur(0);
+}
+
+.itemSection img{
+  height: 300px;
+}
+
+.itemSection img:hover{
+  filter:blur(2px);
+  border: 2px solid #fff;
+}
+
+.itemSection:hover > .hidden{
+  visibility: visible;
+}
+
+.hidden{
+  visibility: hidden;
+  position: relative;
+  top: -180px;
+  left:-20px;
+  text-align: center;
+  color:#bbb;
+}
+
+.hiddenContent{
+  background: rgba(100,100,100,.8);
+}
+
+#oneContent{
+  display: none;
+}
+
+#twoContent{
+  display: none;
+}
+
+#threeContent{
+  display: none;
+}
+
+.description{
+  display: flex;
+  flex-flow: row wrap;
+  padding: 50px;
+  justify-content: center;
+}
+
+.itemBox{
+  width: 45%;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  text-align: justify;
+}
+
+#footer{
+  display: flex;
+}
+
+@-webkit-keyframes slideIn {
+  0%{
+    transform: translateY(900px);
+    filter: blur(100%);
+  }
+  100%{
+    transform: translateY(0);
+    filter: blur(0%);
+  }
+}
+@-mox-keyframes slideIn {
+  start{
+    transform: translateY(900px);
+    filter: blur(100%);
+  }
+  end{
+    transform: translateY(0);
+    filter: blur(0%);
+  }
+}
+@keyframes slideIn {
+  0%{
+    transform: translateY(900px);
+    filter: blur(100%);
+  }
+  100%{
+    transform: translateY(0);
+    filter: blur(0%);
+  }
+}
+
+.col{
+  animation-name: slideIn;
+  animation-duration: 2s;
+}
+
+@media screen and (max-width: 1540) {
+  .row{
+    flex-wrap: wrap;
+  }
+}

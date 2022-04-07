@@ -28,20 +28,7 @@ p {
     -o-background-size:cover;
     background-size: cover;
 }
-/*#wrap2{
-    position:absolute;
-    background-color:#171716;
-    margin:0 auto;
-    padding:0;
-    opacity:0.8;
-    width:100%;
-    top:0;
-    bottom:0;
-    right:0;
-    left:0;
-    z-index: -1;
-    height: 100%;
-}*/
+
 .fixedwidth{
     width:1400px;
     height: inherit;
