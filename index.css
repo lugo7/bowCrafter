@@ -2,6 +2,7 @@ body{
   margin: 0 auto;
   padding: 0;
   color:#ddd;
+  height:100%;
 }
 
 .pageBackground{
@@ -48,6 +49,7 @@ h3{
   margin: 50px 50px 0 50px;
   display: flex;
   flex-direction: column;
+  min-height:800px;
 }
 
 .row{
@@ -76,7 +78,7 @@ h3{
   height: 300px;
 }
 
-.itemSection img:hover{
+.active, .itemSection img:hover{
   filter:blur(2px);
   border: 2px solid #fff;
 }
@@ -122,6 +124,10 @@ h3{
   padding-right: 50px;
   padding-bottom: 50px;
   text-align: justify;
+}
+
+#spacer{
+  height:400px;
 }
 
 #footer{
