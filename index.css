@@ -14,7 +14,7 @@ body{
 }
 
 .background{
-  object-fit: cover;
+  object-fit: fill;
   width: 100%;
   height: 100%;
 }
@@ -121,9 +121,29 @@ h3{
 
 .itemBox{
   width: 45%;
-  padding-right: 50px;
+  padding: 0 25px 0 25px;
   padding-bottom: 50px;
   text-align: justify;
+}
+
+.itemBox h3, .itemBox ul{
+  text-align: center;
+  list-style: none;
+}
+
+.itemBoxFull{
+  padding: 0 50px 50px 50px;
+  width: 50%;
+}
+
+.itemBoxFull img{
+  object-fit: cover;
+  width:100%;
+  height: 100%;
+}
+
+iframe{
+  margin: 20px 0 20px 0;
 }
 
 #spacer{
@@ -131,7 +151,14 @@ h3{
 }
 
 #footer{
-  display: flex;
+  width: 100%;
+}
+
+#footer>*{
+  display: inline;
+  padding: 20px 0 20px 20px;
+  color: white;
+  text-decoration: none;
 }
 
 @-webkit-keyframes slideIn {
