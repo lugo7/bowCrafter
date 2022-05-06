@@ -4,37 +4,43 @@ function slideIn(elem){
 }
 
 var itemSection=document.getElementsByClassName('itemSection');
-
-function loadIn(item){
-  slideIn(item);
-}
+var panel=document.getElementsByClassName('contentRow');
 
 function active(){
   $('.imageRow').style.height='200px';
   $('#spacer').style.height='10px';
 }
 
+function setClass(els, className, fnName) {
+    for (var i = 0; i < els.length; i++) {
+        els[i].classList[fnName](className);
+    }
+}
+
 document.addEventListener("DOMContentLoaded", function(){
   for(let i=0;i<itemSection.length;i++){
-    setInterval(loadIn(itemSection[i]),1000);
+    setTimeout(function(){
+      slideIn(itemSection[i]);
+    },500 * i);
   }
+
   for(let i=0;i<itemSection.length;i++){
     itemSection[i].addEventListener('click',function(elem){
-      if(elem.target.id=='one'){
-        $('#oneContent').toggle('slow');
-        $('#oneB').classList.toggle('active');
-        active();
-      }
-      else if(elem.target.id=='two') {
-        $('#twoContent').toggle('slow');
-        $('#twoB').classList.toggle('active');
-        active();
-      }
-      else if(elem.target.id=='three'){
-        $('#threeContent').toggle('slow');
-        $('#threeB').classList.toggle('active');
-        active();
-      }
+      var setClasses= !this.classList.contains('open');
+      setClass(itemSection, 'active', 'remove');
+      setClass(panel, 'open', 'remove');
+      if (setClasses) {
+            this.classList.toggle("active");
+            if(this.classList.contains("one")){
+              panel[0].classList.toggle('open');
+            }
+            else if(this.classList.contains("two")){
+              panel[1].classList.toggle('open');
+            }
+            else if(this.classList.contains("three")){
+              panel[2].classList.toggle('open');
+            }
+        }
     });
   }
 });
